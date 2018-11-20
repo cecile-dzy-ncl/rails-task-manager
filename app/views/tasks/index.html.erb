@@ -1,0 +1,18 @@
+<h1>My Tasks</h1>
+<div class="col-sm-12">
+<% @tasks.each do |task| %>
+  <% if task.completed %>
+    <div class="checkbox">
+      <input type="checkbox" value="" checked>
+      <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+      <%= task.title %>
+    </div>
+  <% else %>
+    <div class="checkbox">
+      <input type="checkbox" value="">
+      <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+      <%= task.title %>
+    </div>
+  <% end %>
+<% end %>
+</div>
