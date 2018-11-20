@@ -1,18 +1,29 @@
-<h1>My Tasks</h1>
-<div class="col-sm-12">
-<% @tasks.each do |task| %>
-  <% if task.completed %>
-    <div class="checkbox">
-      <input type="checkbox" value="" checked>
-      <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
-      <%= task.title %>
-    </div>
-  <% else %>
-    <div class="checkbox">
-      <input type="checkbox" value="">
-      <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
-      <%= task.title %>
-    </div>
+<div class="container-main">
+
+<ul class="list-inline">
+  <li><i class="fab fa-angellist"></i></li>
+  <li><h1>My Tasks</h1></li>
+  <li><i class="fab fa-angellist"></i></li>
+</ul>
+
+<div class="card">
+  <% @tasks.each do |task| %>
+    <% if task.completed %>
+      <div class="checkbox">
+        <span><i class="fas fa-check-square"></i></span>
+        <%= link_to "#{task.title}", task_path(task.id) %>
+      </div>
+    <% else %>
+      <div class="checkbox">
+        <span><i class="fas fa-square"></i></span>
+        <%= link_to "#{task.title}", task_path(task.id) %>
+      </div>
+    <% end %>
   <% end %>
-<% end %>
+</div>
+
+<div class="card">
+  <button class="btn-blue"><%= link_to "Add a new task", new_task_path %></button>
+</div>
+
 </div>

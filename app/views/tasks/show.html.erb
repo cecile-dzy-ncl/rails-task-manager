@@ -1,0 +1,36 @@
+<div class="container-main">
+
+  <div class="card">
+    <h1><%= @task.title  %></h1>
+
+    <div class="description">
+      <div class="container-description">
+        <p><%= @task.details %></p>
+      </div>
+    </div>
+
+    <div class="container-check">
+      <% if @task.completed %>
+        <div class="checkbox">
+          <input type="checkbox" value="" checked>
+          <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span><p class="check">This task is completed!</p>
+        </div>
+      <% else %>
+        <div class="checkbox">
+          <input type="checkbox" value="" disabled>
+          <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+          <p class="check">This task is not completed yet!</p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+
+<div class="card">
+<button class="btn-blue"><%= link_to "Edit this task", edit_task_path %></button>
+  <button class="btn-blue"><%= link_to "Delete", destroy_task_path(@task.id), method: 'delete', data: {confirm: "Are you sure?"} %></button>
+  <button class="btn-blue"><%= link_to "Back to list", tasks_path %></button>
+</div>
+
+</div>
+

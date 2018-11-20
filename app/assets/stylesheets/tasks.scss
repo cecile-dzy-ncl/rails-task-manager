@@ -1,3 +1,118 @@
 // Place all the styles related to the tasks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.container-description {
+  background: #ebebeb;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  padding-left: 10px;
+  border-radius: 20px;
+  width: 60%;
+}
+
+.container-check {
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+
+.description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  color: #369bac;
+  font-size: 18px;
+}
+
+a:hover{
+  color: #23636E;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  background-color: #EBEBEB;
+  font-size: 20px;
+  line-height: 1.6em;
+  color: #7d7d7d;
+  text-align: center;
+}
+
+.container-main {
+  position: relative;
+  margin: 0 auto;
+  max-width: 50%;
+  width: 100%;
+}
+
+.card {
+  background-color: #FFFFFF;
+  border-radius: 05px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
+}
+
+.btn-blue {
+  background-color: #369BAC;
+  color: #ffffff;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.btn-blue a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.btn-blue:hover {
+  background-color: #23636E;
+  color: #ffffff;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.fab {
+  font-size: 30px;
+}
+
+ul {
+  padding: 30px;
+}
+
+li {
+  display: inline;
+  list-style: none;
+}
+
+.list-inline > li {
+  display: inline-block;
+  padding: 0px 20px;
+  font-size: 17px;
+}
+
+.form-controls {
+  padding: 15px;
+  margin: 10px;
+}
+
+.form-controls.submit {
+  background-color: #23636E;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.check {
+  margin: 20px;
+}
